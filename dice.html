@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    
+    
+    #out{
+        border: 1px solid black;
+        height: 80px;
+        width: 79px;
+       margin-left: 10px;
+       margin-top: 10px;
+        border-style: none;
+        
+    }
+    .main{
+        border: 1px solid black;
+        height: 200px;
+        width: 100px;
+        text-align: center;
+        margin-left: 400px;
+        border-style: none;
+    }
+   button{
+height: 30px;
+width: 100px;
+border-radius: 20px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    h1{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+    
+    
+    </style>
+</head>
+
+<body><h1>DICE GAME </h1>
+    <div class="main">
+<button onclick="roller()">Roll the Dice </button>
+<div id="out"></div>
+</div>
+<script>
+
+
+
+  function roller(){
+     let rd = Math.floor(Math.random()*6+1)
+    
+     let a= document.getElementById("out");
+     if(rd===1){
+        a.style.backgroundImage.backgroundRepeat= "url('one.png')"     }
+    else  if(rd===2){
+
+        a.style.backgroundImage= "url('two.png')" 
+     }
+   else  if(rd===3){
+       
+    a.style.backgroundImage= "url('three.png')" 
+     }
+   else if(rd===4){
+       
+    a.style.backgroundImage= "url('four.png')" 
+     }
+    else  if(rd===5){
+       
+        a.style.backgroundImage= "url('five.png')" 
+     }
+    else {
+   
+        a.style.backgroundImage= "url('six.png')" 
+     }
+  }
+
+    </script>
+</body>
+
+</html>
